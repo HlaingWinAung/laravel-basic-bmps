@@ -17,10 +17,16 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::get("/about", function () {
-    return "this is about page";
+    return view("about");
 });
 Route::get("/contact", function () {
-    return "this is contact page";
+    return view("contact");
+});
+Route::get("/products", function () {
+    return view("product");
+});
+Route::get("/shops", function () {
+    return view("shops.shop");
 });
 Route::get("products/{product_id}/shop/{shop_id}", function ($product_id, $shop_id) {
     return "this is products page for ".$product_id." for ".$shop_id;
